@@ -1,3 +1,5 @@
+// Garante que o dado seja apenas número
+
 let x: number = 10; // tipagem vem logo após ao nome da variável após o :
 
 x = 'teste' // uma vez definido o tipo da variável, o TS não aceita que o tipo dela seja outro
