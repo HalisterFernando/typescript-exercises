@@ -25,3 +25,15 @@ function showNumbers(a: number, b: number, c?: number) {
 showNumbers(1, 2, 3); // Com parâmetro opcional
 showNumbers(1, 2); // Sem parâmetro opcional
 showNumbers(1); // A função deve conter até dois parâmetros obrigatórios
+
+// validando argumentos opcionais
+// o primeiro parâmetro nunca pode ser opcional 
+
+function advancedGreeting(firstName: string, lastName?: string) {
+
+    if (lastName !== undefined) {
+        return `Olá, ${firstName}, ${lastName}`;
+    }
+
+    return `Olá ${firstName}`;
+}
