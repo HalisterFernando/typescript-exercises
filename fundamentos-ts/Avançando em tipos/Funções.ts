@@ -16,3 +16,10 @@ function greeting(name: string): string {
 }
 
 greeting('Halister')
+
+// O typescript também ajuda com funções anônimas validando o código digitado
+
+setTimeout(function() {
+    const sallary: number = 1000
+    console.log(parseFloat(sallary)) // Ele avisa que o método parseFloat não funciona em tipo number
+}, 4000)
