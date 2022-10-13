@@ -8,6 +8,6 @@ class User {
     age!: number
 }
 
-const halister = new User()
+const jão = new User()
 
-console.log(halister)
+console.log(jão)
