@@ -1,6 +1,9 @@
 import importGreet from "./greet";
-import { x } from './variable'
+import { x, a, b, myFunction } from './variable'
 
 importGreet()
 
 const IMP = x
+a
+b
+myFunction()
