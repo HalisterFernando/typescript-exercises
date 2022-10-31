@@ -2,7 +2,7 @@
 // Inserimos o decorator antes da declaração do método
 // Ele é executado antes do método
 
-function enumerable(value: boolean) {
+export function enumerable(value: boolean) {
     return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         descriptor.enumerable = value
 
