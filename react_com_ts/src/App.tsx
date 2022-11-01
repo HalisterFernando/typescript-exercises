@@ -1,4 +1,4 @@
-
+import FirstComponent from "./components/FirstComponent"
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
         </div>
       )}
       <h3>{userGreeting(name)}</h3>
+      <FirstComponent />
     </div>
   );
 }
