@@ -1,6 +1,7 @@
 import Destructuring from "./components/Destructuring"
 import FirstComponent from "./components/FirstComponent"
 import SecondComponent from "./components/SecondComponent"
+import State from "./components/State"
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       comentsQty={10}
       tags={['ts', 'js']} 
       />
+      <State />
     </div>
   );
 }
