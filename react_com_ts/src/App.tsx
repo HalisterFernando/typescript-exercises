@@ -1,4 +1,6 @@
+import Destructuring from "./components/Destructuring"
 import FirstComponent from "./components/FirstComponent"
+import SecondComponent from "./components/SecondComponent"
 
 function App() {
 
@@ -24,6 +26,13 @@ function App() {
       )}
       <h3>{userGreeting(name)}</h3>
       <FirstComponent />
+      <SecondComponent name="Segundo" />
+      <Destructuring 
+      title="Primeiro post"
+      content="some content"
+      comentsQty={10}
+      tags={['ts', 'js']} 
+      />
     </div>
   );
 }
