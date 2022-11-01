@@ -8,6 +8,10 @@ function App() {
   const age: number = 32
   const isWorking: boolean = false
 
+  // funções
+
+  const userGreeting = (name: string): string => `Olá ${name}`
+
   return (
     <div className="App">
       <h1> TypeScript com React</h1>
@@ -18,6 +22,7 @@ function App() {
           Está trabalhando
         </div>
       )}
+      <h3>{userGreeting(name)}</h3>
     </div>
   );
 }
