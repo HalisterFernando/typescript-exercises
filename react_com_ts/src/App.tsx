@@ -1,4 +1,5 @@
 import { createContext } from "react"
+import Context from "./components/Context"
 import Destructuring, {Category} from "./components/Destructuring"
 import FirstComponent from "./components/FirstComponent"
 import SecondComponent from "./components/SecondComponent"
@@ -68,6 +69,7 @@ function App() {
       <State />
       {myText && (<p>Tem algum texto aqui</p>)}
       {mySecondText && (<p>Tem algum texto aqui</p>)}
+      <Context />
     </div>
   </AppContext.Provider>
   );
