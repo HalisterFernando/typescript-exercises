@@ -1,7 +1,22 @@
+import { createContext } from "react"
 import Destructuring, {Category} from "./components/Destructuring"
 import FirstComponent from "./components/FirstComponent"
 import SecondComponent from "./components/SecondComponent"
 import State from "./components/State"
+
+interface IAppContext {
+  language: string,
+  framework: string,
+  projects: number
+}
+
+const contextValue: IAppContext = {
+  language: 'JavaScript',
+  framework: 'Express',
+  projects: 5
+}
+
+export const AppContext = createContext<IAppContext | null>(null);
 
 function App() {
 
@@ -24,7 +39,13 @@ function App() {
   const mySecondText: textOrNull = null;
   const testeFixed: fixed = 'isso'
 
+  // context 
+
+  
+
   return (
+   <AppContext.Provider value={contextValue}>
+
     <div className="App">
       <h1> TypeScript com React</h1>
       <h2>Nome: {name}</h2>
@@ -48,7 +69,9 @@ function App() {
       {myText && (<p>Tem algum texto aqui</p>)}
       {mySecondText && (<p>Tem algum texto aqui</p>)}
     </div>
+  </AppContext.Provider>
   );
 }
 
 export default App;
+
