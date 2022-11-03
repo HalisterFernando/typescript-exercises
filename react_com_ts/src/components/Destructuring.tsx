@@ -5,9 +5,16 @@ interface Props  {
     content: string
     comentsQty: number
     tags: string[]
+    category: Category
 }
 
-const Destructuring = ({title, content, comentsQty, tags}: Props) => {
+export enum Category {
+    JS = 'JavaScript',
+    TS = 'TypeScript',
+    P = 'Python'
+}
+
+const Destructuring = ({title, content, comentsQty, tags, category}: Props) => {
    
   return (
     <div>
@@ -21,6 +28,7 @@ const Destructuring = ({title, content, comentsQty, tags}: Props) => {
                 ))
             }
         </div>
+        <h4>Categoria: {category}</h4>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import Destructuring from "./components/Destructuring"
+import Destructuring, {Category} from "./components/Destructuring"
 import FirstComponent from "./components/FirstComponent"
 import SecondComponent from "./components/SecondComponent"
 import State from "./components/State"
@@ -33,6 +33,7 @@ function App() {
       content="some content"
       comentsQty={10}
       tags={['ts', 'js']} 
+      category={Category.TS}
       />
       <State />
     </div>
