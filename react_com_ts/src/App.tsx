@@ -15,6 +15,15 @@ function App() {
 
   const userGreeting = (name: string): string => `Olá ${name}`
 
+  // type 
+
+  type textOrNull = string | null
+  type fixed = 'isso' | 'ou' | 'aquilo'
+
+  const myText: textOrNull = 'Tem algum texto aqui';
+  const mySecondText: textOrNull = null;
+  const testeFixed: fixed = 'isso'
+
   return (
     <div className="App">
       <h1> TypeScript com React</h1>
@@ -36,6 +45,8 @@ function App() {
       category={Category.TS}
       />
       <State />
+      {myText && (<p>Tem algum texto aqui</p>)}
+      {mySecondText && (<p>Tem algum texto aqui</p>)}
     </div>
   );
 }
