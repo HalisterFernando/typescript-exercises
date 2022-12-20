@@ -36,6 +36,16 @@
     return res.send('Utilizando interfaces')
  })
 
+ // 6 - enviando json 
+
+ app.get('/api/json', (req: Request, res: Response) => {
+    return res.json({
+        name: 'Shirt',
+        price: 30,
+        color: 'blue'
+    })
+ })
+
  app.listen(3000, () => {
     console.log("Aplicação de TS + express funcionando!")
  })
