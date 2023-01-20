@@ -9,6 +9,14 @@
 
  const app = express()
  app.use(express.json())
+  // 11 - middleware para todas as rotas 
+
+  const showPath = (req: Request, res: Response, next: NextFunction) => {
+   console.log(req.path)
+   return next()
+}
+
+app.use(showPath)
 
  app.get('/', (req, res) => {
     return res.status(200).send('Hello Express')
@@ -92,6 +100,8 @@
  app.get('/api/user/:id/access', checkUser, (req: Request, res: Response) => {
     return res.json({msg: 'Seja bem-vindo à área administrativa'});
  })
+
+
 
  app.listen(3000, () => {
     console.log("Aplicação de TS + express funcionando!")
