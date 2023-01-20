@@ -101,6 +101,16 @@ app.use(showPath)
     return res.json({msg: 'Seja bem-vindo à área administrativa'});
  })
 
+ // 12 - req e res com generics
+
+ app.get('/api/user/:id/details/:name',(req: Request<{id: string, name: string}>, res: Response<{status: boolean}>) => {
+   const {id, name} = req.params 
+   
+   console.log(`ID: ${id}, Name: ${name}`)
+
+   return res.json({status: true})
+ }) 
+
 
 
  app.listen(3000, () => {
