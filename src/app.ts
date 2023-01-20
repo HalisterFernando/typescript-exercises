@@ -111,7 +111,15 @@ app.use(showPath)
    return res.json({status: true})
  }) 
 
-//teste
+// 13 - tratando erros 
+
+app.get('api/error', (req: Request, res: Response) => {
+   try {
+      throw new Error('Algo deu errado')
+   } catch (err: any) {
+      res.status(500).send(err.message)
+   }
+})
 
 
 
