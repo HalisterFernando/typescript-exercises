@@ -71,6 +71,14 @@
     return res.send(`O usuário está vendo o produto com id ${id}, que possúi a review ${reviewId}`)
  })
 
+ // 9 - router handler
+
+ const getUser = (req: Request, res: Response) => {
+    return res.send(`Usuário com id ${req.params.id}`)
+ }
+
+ app.get('/api/user/:id', getUser)
+
  app.listen(3000, () => {
     console.log("Aplicação de TS + express funcionando!")
  })
