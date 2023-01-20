@@ -106,10 +106,12 @@ app.use(showPath)
  app.get('/api/user/:id/details/:name',(req: Request<{id: string, name: string}>, res: Response<{status: boolean}>) => {
    const {id, name} = req.params 
    
-   console.log(`ID: ${id}, Name: ${name}`)
+   console.log(`ID: ${id}, name: ${name}`)
 
    return res.json({status: true})
  }) 
+
+//teste
 
 
 
