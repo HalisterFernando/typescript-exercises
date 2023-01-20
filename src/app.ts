@@ -4,7 +4,7 @@
 
 // 2 iniciando express 
 
- import express from 'express';
+ import express, { NextFunction } from 'express';
  import { Request, Response } from 'express';
 
  const app = express()
@@ -78,6 +78,20 @@
  }
 
  app.get('/api/user/:id', getUser)
+
+ // 10 - middleware
+
+ const checkUser = (req: Request, res: Response, next: NextFunction) => {
+    const { id } = req.params
+
+    if ( id === '1') return next()
+
+    return res.send('Não pode seguir')
+ }
+
+ app.get('/api/user/:id/access', checkUser, (req: Request, res: Response) => {
+    return res.json({msg: 'Seja bem-vindo à área administrativa'});
+ })
 
  app.listen(3000, () => {
     console.log("Aplicação de TS + express funcionando!")
