@@ -46,6 +46,31 @@
     })
  })
 
+ // 7 - parametros de rotas
+
+ app.get('/api/product/:id', (req: Request, res: Response) => {
+    const { id } = req.params
+
+    if (id === '1') {
+       return res.json({
+         id: 1, 
+         name: 'Boné',
+         price: 10
+
+       })
+    }
+
+    return res.send('Produto não encontrado')
+ }) 
+
+ // 8 -  rotas complexas
+ 
+ app.get('/api/product/:id/review/:reviewId', (req: Request, res: Response) => {
+    const { id, reviewId } = req.params
+
+    return res.send(`O usuário está vendo o produto com id ${id}, que possúi a review ${reviewId}`)
+ })
+
  app.listen(3000, () => {
     console.log("Aplicação de TS + express funcionando!")
  })
